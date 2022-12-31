@@ -1,0 +1,74 @@
+.inputContainer {
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+  background: var(--Very-Dark-Desaturated-Blue--Dark);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.checkbox {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--Dark-Grayish-Blue--Dark);
+  cursor: pointer;
+  border: none;
+  transition: none;
+}
+
+.checkbox div {
+  width: 93%;
+  height: 93%;
+  border-radius: 50%;
+  background: var(--Very-Dark-Desaturated-Blue--Dark);
+  transition: none;
+  pointer-events: none;
+}
+
+.checkbox.completed,
+.checkbox:hover {
+  background: var(--Check-Background);
+}
+
+.checkbox.completed div {
+  background: url(../images/icon-check.svg) 5px 6px/10px no-repeat,
+    var(--Check-Background);
+}
+
+.taskInput {
+  background: none;
+  border: none;
+  font-size: calc(1rem + 0.3vw);
+  font-family: inherit;
+  color: var(--Light-Grayish-Blue--Dark);
+  margin-left: 20px;
+  width: 90%;
+}
+
+.taskInput::placeholder {
+  color: var(--Dark-Grayish-Blue--Dark);
+}
+
+.taskInput:focus {
+  outline: none;
+}
+
+/* Light Theme */
+
+body.light .inputContainer {
+  background: var(--Very-Light-Gray--Light);
+}
+
+body.light .checkbox:not(.completed) div {
+  background: var(--Very-Light-Gray--Light);
+}
+
+body.light .taskInput{
+  color: var(--Very-Dark-Grayish-Blue--Light);
+}

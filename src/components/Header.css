@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 30px;
+}
+
+.heading {
+  font-size: calc(1rem + 0.8vw);
+}
+
+.themeBtn {
+  background: url("../images/icon-sun.svg") center center/cover no-repeat;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+body.light .themeBtn {
+  background: url("../images/icon-moon.svg") center center/cover no-repeat;
+}
+
+@media screen and (max-width: 500px){
+  .heading{
+    font-size: 1.8rem;
+  }
+}

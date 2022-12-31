@@ -1,0 +1,97 @@
+.taskBox {
+  height: 42.7vh;
+  background: var(--Very-Dark-Desaturated-Blue--Dark);
+  box-shadow: 0px 30px 30px var(--Very-Dark-Desaturated-Blue--Dark);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.defaultText {
+  display: block;
+  margin: auto;
+  width: max-content;
+  color: var(--Dark-Grayish-Blue--Dark);
+  pointer-events: none;
+  user-select: none;
+}
+
+.taskBox .checkbox {
+  margin: 0 17px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid var(--Very-Dark-Grayish-Blue--Dark);
+  transform: translate(0px, 0px);
+}
+
+.task label {
+  display: flex;
+  align-items: center;
+  padding: 18px 0px;
+  width: 90%;
+  cursor: pointer;
+}
+
+.task p {
+  transform: translate(0px, 2px);
+  color: var(--Light-Grayish-Blue--Dark);
+  min-width: min-content;
+  max-width: max-content;
+  word-wrap: break-word;
+  font-size: 1.2rem;
+}
+
+.checked {
+  text-decoration: line-through;
+  color: var(--Dark-Grayish-Blue--Dark) !important;
+}
+
+.task .delContainer {
+  cursor: pointer;
+  margin-right: 20px;
+  height: 18px;
+  visibility: hidden;
+}
+
+.task:hover .delContainer {
+  visibility: visible;
+}
+
+/* Light Theme */
+
+body.light .taskBox {
+  background: var(--Very-Light-Gray--Light);
+  box-shadow: 0px 60px 30px 0px hsl(233, 11%, 84%);
+}
+
+body.light .task{
+  border-bottom: 1px solid var(--Dark-Grayish-Blue--Light);
+}
+
+body.light .task p{
+  color: var(--Very-Dark-Grayish-Blue--Light);
+}
+
+body.light .checked{
+  color: var(--Light-Grayish-Blue--Light) !important;
+}
+
+
+
+@media screen and (max-width: 500px){
+  .task p{
+    font-size: 0.7rem;
+  }
+
+  .task .delContainer{
+    visibility: visible;
+  }
+}
